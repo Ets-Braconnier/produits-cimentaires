@@ -8,6 +8,11 @@
   <meta name="description"
     content="Produits cimentaires : réparation, bétons, enduits de cimentage, mortiers, ciments, étanchéité, adjuvants, chaux, primers, sols, colles & joints. Prix TVAC et stock par format." />
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .titleLink{color:inherit;text-decoration:none;}
+    .titleLink:hover{text-decoration:underline;}
+  </style>
+
 </head>
 
 <body>
@@ -71,9 +76,7 @@
       ],
       "colles-et-joints-carrelages": [
         "mapei-keraflex-blanc-5kg.png",
-        "mapei-keraflex-blanc-25kg.png",
         "mapei-keraflex-gris-5kg.png",
-        "mapei-keraflex-gris-25kg.png",
         "sakret-euroflex-25kg.png",
         "steinfuge-sf50.png",
         "mapei-ultracolor-plus-2kg.png",
@@ -175,9 +178,7 @@
 
       // Colles et joints
       "colles-et-joints-carrelages/mapei-keraflex-blanc-5kg.png": "Keraflex blanc",
-      "colles-et-joints-carrelages/mapei-keraflex-blanc-25kg.png": "Keraflex blanc",
       "colles-et-joints-carrelages/mapei-keraflex-gris-5kg.png": "Keraflex gris",
-      "colles-et-joints-carrelages/mapei-keraflex-gris-25kg.png": "Keraflex gris",
       "colles-et-joints-carrelages/sakret-euroflex-25kg.png": "Euroflex",
       "colles-et-joints-carrelages/steinfuge-sf50.png": "Steinfuge SF50",
       "colles-et-joints-carrelages/mapei-ultracolor-plus-5kg.png": "Ultracolor plus 5kg",
@@ -208,6 +209,54 @@
       "reparation/toupret-touprelex.png": "Touprelex"
 
     };
+
+    const PDFS = {
+      "enduits-de-cimentage/sakret-kam-25kg.png": "sakret-kam.pdf",
+      "enduits-de-cimentage/sakret-kam-san-25kg.png": "sakret-kam-sam.pdf",
+      "enduits-de-cimentage/sakret-map-25kg.png": "sakret-map.pdf",
+      "enduits-de-cimentage/sakret-map-e-25kg.png": "sakret-map-e.pdf",
+      "enduits-de-cimentage/sakret-map-l-25kg.png": "sakret-map-l.pdf",
+      "enduits-de-cimentage/mapei-planiseal-88.png": "mapei-planiseal-88.pdf",
+      "enduits-de-cimentage/toupret-egaliss-facade.png": "toupret-egaliss-facade.pdf",
+      "betons/sakret-beton-be-25kg.png": "sakret-beton-be.pdf",
+      "betons/sakret-fix-beton-25kg.png": "sakret-fix-beton.pdf",
+      "mortiers/knauf-mortier-5kg.png": "knauf-mortier-prepare.pdf",
+      "mortiers/knauf-mortier-refractaire.png": "knauf-mortier-refractaire.pdf",
+      "mortiers/sakret-mortier-zm-25kg.png": "sakret-mortier-zm.pdf",
+      "ciments/diamur-ciment-zc325-25kg.png": "diamur-ciment-zc325.pdf",
+      "ciments/knauf-ciment-blanc.png": "knauf-ciment-blanc.pdf",
+      "ciments/knauf-ciment-scellement-pr-5kg.png": "knauf-ciment-de-scellement-pr.pdf",
+      "chaux/enci-mc12.5-25kg.png": "enci-metselcement-mc12.5.pdf",
+      "chaux/footcal-25kg.png": "footcal.pdf",
+      "chaux/supercalco-25kg.png": "supercalco.pdf",
+      "sols/diamur-chape-25kg.png": "diamur-chape-u204.pdf",
+      "sols/diamur-stabilisé-25kg.png": "diamur-stabilise-u071.pdf",
+      "sols/egaline-weberniv-fiber.png": "weber-egaline.pdf",
+      "colles-et-joints-carrelages/mapei-keraflex-blanc-5kg.png": "mapei-keraflex.pdf",
+      "colles-et-joints-carrelages/mapei-keraflex-gris-5kg.png": "mapei-keraflex.pdf",
+      "colles-et-joints-carrelages/sakret-euroflex-25kg.png": "sakret-euroflex.pdf",
+      "colles-et-joints-carrelages/steinfuge-sf50.png": "murexin-steinfuge.pdf",
+      "colles-et-joints-carrelages/mapei-ultracolor-plus-2kg.png": "mapei-ultracolor-plus.pdf",
+      "colles-et-joints-carrelages/mapei-ultracolor-plus-5kg.png": "mapei-ultracolor-plus.pdf",
+      "colles-et-joints-carrelages/mapei-ultracolor-plus-23kg.png": "mapei-ultracolor-plus.pdf",
+      "colles-et-joints-carrelages/mapi-ultramastic.png": "mapei-ultramastic.pdf",
+      "colles-et-joints-carrelages/weber-joint-pro-blanc.png": "weberjoint-pro.pdf",
+      "adjuvants/soudalatex-dry.png": "soudal-soudalatex-dry.pdf",
+      "adjuvants/soudaplast-mz.png": "soudal-soudaplast-mz.pdf",
+      "adjuvants/weberad-mics-air-1l.png": "weber-weberad-mics-air.pdf",
+      "adjuvants/weberad-superbond.png": "weber-weberad-superbond.pdf",
+      "primers/drago-paint-beton-tack.png": "dragopaint-beton-tack.pdf",
+      "primers/drago-paint-gips-primer.png": "dragopaint-gyps-primer.pdf",
+      "primers/knauf-betokontakt.png": "knauf-betokontakt.pdf",
+      "primers/knauf-stuc-primer.png": "knauf-stuc-primer.pdf",
+      "primers/mapei-ecoprim-grip-plus.png": "mapei-eco-prim-grip-plus.pdf",
+      "primers/mapei-primer-g.png": "mapei-primer-g.pdf",
+      "primers/mapei-mapegum-wps.png": "mapei-mapegum-wps.pdf",
+      "reparation/knauf-reno-beton.png": "knauf-renobeton.pdf",
+      "reparation/toupret-fibarex.png": "toupret-fibarex.pdf",
+      "reparation/toupret-granirex.png": "toupret-granirex.pdf",
+      "reparation/toupret-touprelex.png": "toupret-touprelex.pdf"
+};
 
     /** Tailles fallback (si aucune taille n’est trouvée dans l’Excel) */
     const CAT_SIZES = {
@@ -512,6 +561,9 @@
 
         const label = (DISPLAY_NAMES[pathKey] ?? renderLabelFromFilename(f));
 
+        const pdfFile = PDFS[pathKey];
+        const href = pdfFile ? `pdf/${encodeURIComponent(pdfFile)}` : src;
+
         const options = (SIZES_BY_PATH[pathKey] && SIZES_BY_PATH[pathKey].length)
           ? SIZES_BY_PATH[pathKey]
           : getSizeOptions(cat);
@@ -530,9 +582,9 @@
 
         html += `
           <figure>
-            <figcaption>${label}</figcaption>
+            <figcaption><a class="titleLink" href="${href}" target="_blank" rel="noopener">${label}</a></figcaption>
 
-            <a class="thumb" href="${src}" target="_blank" rel="noopener">
+            <a class="thumb" href="${href}" target="_blank" rel="noopener">
               <img src="${src}" alt="${label}"
                 onerror="this.style.display='none'; this.closest('figure').insertAdjacentHTML('beforeend','<div class=\\'missing\\'>❌ Introuvable : ${src}</div>')">
             </a>
